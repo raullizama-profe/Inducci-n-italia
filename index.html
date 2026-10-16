@@ -144,8 +144,10 @@ ol.num li::before{content:counter(n);flex:none;width:30px;height:30px;border-rad
 .complete p{color:#D8E2F2}
 
 /* Pregúntame */
-.chat{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:20px;display:grid;gap:18px}
-.log{display:grid;gap:16px}
+.chat{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:20px;display:grid;gap:18px;grid-template-columns:minmax(0,1fr)}
+.log{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+.chat>*,.log>*{min-width:0}
+@media (max-width:520px){.chat{padding:14px}}
 .msg{display:flex;gap:10px;align-items:flex-start}
 .msg .av{flex:none;width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:20px}
 .msg .bubble{background:var(--paper)}
@@ -295,6 +297,7 @@ footer b{color:#fff}
   <div class="wrap">
     <p><b>Fuente:</b> Material de apoyo para Estudiantes con Ingreso Posterior, Liceo Bicentenario Italia, 2026.</p>
     <p>Esta página no guarda datos personales. Tu avance queda solo en este dispositivo.</p>
+    <p>¿Eres apoderado o apoderada? <a href="apoderados.html" style="color:#fff;font-weight:700">Consultas para familias</a></p>
   </div>
 </footer>
 
